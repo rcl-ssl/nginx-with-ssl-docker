@@ -1,11 +1,11 @@
 version: '3'
 services:
-  rcldnsautorenew:
-    image: rclssl/rclssldnsautorenewdocker:1.0.0
+  rclssldnsautorenew:
+    image: rclssl/dns-autorenew:7.1.0
     environment:
       - RCLSDK__ClientId=your-client-id
       - RCLSDK__ClientSecret=your-client-secret
-      - RCLSDK__TenantId=your-tenent-id
+      - RCLSDK__TenantId=your-tenant-id
       - RCLSDK__SubscriptionId=your-subscription-id
       - CertificateBot__SaveCertificatePath=/etc/ssl/rcl
       - CertificateBot__IncludeCertificatesArray=example.com
