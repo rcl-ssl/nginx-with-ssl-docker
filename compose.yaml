@@ -20,6 +20,8 @@ services:
     volumes: 
       - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf
       - rclssl-certs:/etc/ssl/rcl
+    depends_on:
+      - rclssldnsautorenew
 volumes:
   rclssl-certs:
     driver: local
